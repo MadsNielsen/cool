@@ -215,15 +215,15 @@ public class Baseline extends UCMEntity implements Diffable {
         return plevel;
     }
 
+    //TODO: This method should be refactored. The parameter is redundant, as we use the same method regardless.
 	/**
 	 * Return the promotion level of a baseline. <br>
 	 * If <code>cached</code> is not set, the promotion level is loaded from
 	 * ClearCase.
-	 * 
 	 * @param cached
 	 *            Whether to use the cached promotion level or not
 	 * @return The promotion level of the Baseline
-	 */
+	 */   
 	public Project.PromotionLevel getPromotionLevel( boolean cached ) {
 		if( cached ) {
 			return getPromotionLevel();
